@@ -20,18 +20,23 @@ function writePassword() {
       let chars = "";
       if (confirm("Include lowercase letters?")) {
         chars = chars.concat("abcdefghijklmnopqrstuvwxyz");
+        console.log(chars);
       }
       if (confirm("Include Uppercase letters?")) {
         chars = chars.concat("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+        console.log(chars);
       }
       if (confirm("Include Numbers?")) {
         chars = chars.concat("0123456789");
+        console.log(chars);
       }
       if (confirm("Include Special Characters?")) {
         chars = chars.concat(" !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~");
+        console.log(chars);
       }
       for (let i = 0; i < len; i++)
         myPassword += chars.charAt(Math.floor(Math.random() * chars.length));
+      console.log(myPassword);
       return myPassword;
     }
     return;
